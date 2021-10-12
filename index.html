@@ -14,80 +14,105 @@
     <div class="resume">
         <div class="resume-left">
             <section class="intro-section">
-                <img src="img/cv_pic.jpg" alt="">
+                <img class="profile-pic" src="img/cv_pic.jpg" alt="">
                 <h1>Aida Capó Martí</h1>
-                <h3>Web Developer</h3>
+                <h3 class="job-title">Web Developer</h3>
             </section>
 
-            <section class="contact-section">
-                <span class="contact-detail"><i class="bx bx-map"></i>Menorca, Spain</span>
-                <span class="contact-detail"><i class="bx bx-phone"></i><a href="tel:+34 659 546 948">+34 659 546 948</a></span>
-                <span class="contact-detail"><i class="bx bx-envelope"></i>aidacapom@gmail.com</span>
-            </section>
-
-            <section class="social-section">
-                <a href="https://www.linkedin.com/in/aidacapomarti/" class="social-link">
-                    <i class="bx bxl-linkedin-square"></i>aidacapomarti
-                </a>
-
-                <a href="https://www.linkedin.com/in/aidacapomarti/" class="social-link">
-                    <i class='bx bxl-github'></i>aidacapom
-                </a>
-            </section>
-
-            <section class="profile-section">
-                <h2 class="section-title">Profile</h2>
-
-                <p class="profile-description">Driven front-end developer with a passion for clean code and a good eye for usable design. Determined to write quality applications and websites and make the user experience gratifying.</p>
+            <section class="contact-section flex-container">
+                <div class="grid">
+                    <span class="contact-detail">
+                        <i class="bx bx-map contact-icon"></i>Menorca, Spain
+                    </span>
+                    <span class="contact-detail">
+                        <a href="tel:+34 659 546 948">
+                            <i class="bx bx-phone contact-icon"></i>+34 659 546 948
+                        </a>
+                    </span>
+                    <span class="contact-detail">
+                        <a href="mailto:aidacapom@gmail.com">
+                            <i class="bx bx-envelope contact-icon"></i>aidacapom@gmail.com
+                        </a>
+                    </span>
+                    <span class="contact-detail">
+                        <a href="https://www.linkedin.com/in/aidacapomarti/" target="_blank" class="contact-link">
+                            <i class="bx bxl-linkedin-square contact-icon"></i>aidacapomarti
+                        </a>
+                    </span>
+                    <span class="contact-detail">
+                        <a href="https://www.linkedin.com/in/aidacapomarti/" target="_blank" class="contact-link">
+                            <i class='bx bxl-github contact-icon'></i>aidacapom
+                        </a>
+                    </span>
+                </div>
             </section>
 
             <section class="skills-section">
-                <h2 class="section-title">Skills</h2>
-                <ul class="skills-list">
-                    <li class="skill-item">HTML</li>
-                    <li class="skill-item">CSS</li>
-                    <li class="skill-item">JavaScript</li>
-                    <li class="skill-item">React</li>
-                    <li class="skill-item">Firebase</li>
-                </ul>
+                <div class="section-title-container">
+                    <h2 class="section-title">Skills</h2>
+                </div>
+                
+                <div class="flex-container">
+                    <ul class="skills-list bullet-list grid">
+                        <li class="skill-item">HTML</li>
+                        <li class="skill-item">JavaScript</li>
+                        <li class="skill-item">CSS</li>
+                        <li class="skill-item">React</li>
+                        <li class="skill-item">Firebase</li>
+                    </ul>   
+                </div>
             </section>
 
             <section class="languages-section">
-                <h2 class="section-title">Languages</h2>
+                <div class="section-title-container">
+                    <h2 class="section-title">Languages</h2>
+                </div>
 
-                <ul class="languages-list">
-                    <li class="language-item">Spanish - Native</li>
-                    <li class="language-item">Catalan - Native</li>
-                    <li class="language-item">English - Fluent</li>
-                </ul>
+                <div class="flex-container">
+                    <ul class="languages-list bullet-list">
+                        <li class="language-item">Spanish - <span class="accent">Native</span></li>
+                        <li class="language-item">Catalan - <span class="accent">Native</span></li>
+                        <li class="language-item">English - <span class="accent">Fluent</span></li>
+                    </ul>
+                </div>
             </section>
 
             <section class="hobbies-section">
-                <h2 class="section-title">Hobbies</h2>
+                <div class="section-title-container">
+                    <h2 class="section-title">Hobbies</h2>
+                </div>
 
-                <ul class="hobbies-list">
-                    <li class="hobbie-item"><i class="bx bx-dice-5"></i>Board games</li>
-                    <li class="hobbie-item"><i class="bx bx-dumbbell"></i>Gym</li>
-                    <li class="hobbie-item"><i class="bx bx-film"></i>Cinema</li>
-                </ul>
+                <div class="flex-container">
+                    <ul class="hobbies-list">
+                        <li class="hobbie-item"><i class="bx bx-dice-5"></i> Board Games</li>
+                        <li class="hobbie-item"><i class="bx bx-dumbbell"></i> Gym</li>
+                        <li class="hobbie-item"><i class="bx bx-film"></i> Cinema</li>
+                    </ul>
+                </div>
             </section>
             
         </div>
     
         <div class="resume-right">
-            <section class="education-section">
-                <h2 class="section-title">Education</h2>
+            <section class="profile-section">
+                <div class="section-title-container">
+                    <h2 class="section-title">Profile</h2>
+                </div>
 
-                <div class="education-point">
-                    <div class="education-timeline">
-                        <div class="education-rounder"></div>
-                        <div class="education-line"></div>
-                    </div>
-                    <div class="education-info">
+                <p class="profile-description">Driven front-end developer with a passion for clean code and a good eye for usable design. Determined to write quality applications and websites and make the user experience gratifying.</p>
+            </section>
+
+            <section class="education-section">
+                <div class="section-title-container">
+                    <h2 class="section-title">Education</h2>
+                </div>
+            
+                <div class="grid">
+                    <div class="education-point grid">
                         <h3 class="education-title">Bachelor Degree in Multimedia</h3>
                         <span class="education-institution">Universitat Oberta de Catalunya</span>
                         <span class="education-years">September 2015 — June 2020</span>
-                        <ul class="education-achievements">
+                        <ul class="education-achievements bullet-list">
                             <li class="education-achievement">Created websites using WordPress and Drupal.</li>
                             <li class="education-achievement">Developed websites using HTML5, CSS, JavaScript, PHP and SQL.</li>
                             <li class="education-achievement">Designed and tested user interfaces applying usability heuristics.</li>
@@ -95,19 +120,14 @@
                             <li class="education-achievement">Obtained honors in 16 subjects.</li>
                         </ul>
                     </div>
-                </div>
-
-                <div class="education-point">
-                    <div class="education-timeline">
-                        <div class="education-rounder"></div>
-                    </div>
-                    <div class="education-info">
+    
+                    <div class="education-point">
                         <h3 class="education-title">Master's degree in Application Development for Mobile Devices</h3>
                         <span class="education-institution">Universitat Oberta de Catalunya</span>
                         <span class="education-years">September 2020 - Present</span>
-                        <ul class="education-achievements">
+                        <ul class="education-achievements bullet-list">
                             <li class="education-achievement">Developed native Android applications using Java and Kotlin.</li>
-                            <li class="education-achievement">Designed low fidelity wireframes and interactive prototypes with Axure and Adobe XD</li>
+                            <li class="education-achievement">Designed low fidelity wireframes and interactive prototypes with Axure and Adobe XD.</li>
                             <li class="education-achievement">Wrote unit tests using Jest.</li>
                         </ul>
                     </div>
@@ -115,7 +135,9 @@
             </section>
 
             <section class="courses-section">
-                <h2 class="section-title">Courses</h2>
+                <div class="section-title-container">
+                    <h2 class="section-title">Courses</h2>
+                </div>
 
                 <div class="course-info">
                     <h3 class="course-title">Introduction to HTML5</h3>
@@ -131,30 +153,20 @@
             </section>
 
             <section class="employment-section">
-                <h2 class="section-title">Employment History</h2>
-
-                <div class="employment-point">
-                    <div class="employment-timeline">
-                        <div class="employment-rounder"></div>
-                        <div class="employment-line"></div>
-                    </div>
-                    <div class="employment-info">
-                        <h3 class="employment-title">Cashier</h3>
-                        <span class="employment-place">Mercadona</span>
-                        <span class="employment-years">June 2018 — September 2018</span>
-                    </div>
+                <div class="section-title-container">
+                    <h2 class="section-title">Employment</h2>
                 </div>
 
                 <div class="employment-point">
-                    <div class="employment-timeline">
-                        <div class="employment-rounder"></div>
-                        <div class="employment-line"></div>
-                    </div>
-                    <div class="employment-info">
-                        <h3 class="employment-title">Laundry operator</h3>
-                        <span class="employment-place">Lavandería Marin</span>
-                        <span class="employment-years">June 2019 — September 2019</span>
-                    </div>
+                    <h3 class="employment-title">Cashier</h3>
+                    <span class="employment-place">Mercadona</span>
+                    <span class="employment-years">June 2018 — September 2018</span>        
+                </div>
+
+                <div class="employment-point">
+                    <h3 class="employment-title">Laundry operator</h3>
+                    <span class="employment-place">Lavandería Marin</span>
+                    <span class="employment-years">June 2019 — September 2019</span>
                 </div>
             </section>
         

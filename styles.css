@@ -1,26 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 :root {
-    --header-height: 3em;
-
-    /* Colors */
     --accent-color: #168378;
+    --dark-color: #343434;
+    --dark2-color: #747272;
 }
 
-* {
+*, ::before, ::after {
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    margin: 0 0 var(--header-height);
+    margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    font-weight: 300;
     background: #fcfcfc;
-    color: #403a3a;
+    color: var(--dark-color);
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+
+.bullet-list li::before {
+    content: "\2022";  /* \2022 is the CSS Code/unicode for a bullet */
+    color: var(--accent-color); 
+    font-weight: bold;
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* GLOBAL TYPOGRAPHY STYLES */
+a {
+    color: var(--dark-color);
+    text-decoration: none;
 }
 
 h1, h2, h3, ul, p {
@@ -32,62 +52,128 @@ h1, h2, h3 {
     font-weight: 500;
 }
 
-ul {
-    padding: 0;
-    list-style: none;
+h1 {
+    font-size: 1.375rem;
 }
 
-a {
-    text-decoration: none;
+h2 {
+    font-size: 1.125rem;
 }
 
-img {
-    max-width: 100%;
+h3 {
+    font-size: 1rem;
+}
+
+.bx, 
+.accent {
+    color: var(--accent-color);
 }
 
 
+/* GLOBAL SECTION STYLES */
+section {
+    padding: 0 1.5em 1.5em;
+}
 
+.section-title-container {
+    position: relative;
+    color: #fff;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--accent-color);
+    z-index: -1;
+}
+
+.section-title {
+    width: fit-content;
+    min-width: 180px;
+    background: var(--accent-color);
+    padding: .1em .5em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 0 auto 1em;
+}
+
+/* LAYOUT STYLES */
 .resume {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 0 1.5em;
 }
 
+.grid {
+    display: grid;
+    gap: .5em;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* INTRO SECTION */
+.intro-section {
+    text-align: center;
+}
+
+.job-title {
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: .8px;
+}
+
+.profile-pic {
+    width: 40%;
+    border-radius: 50%;
+}
+
+
+/* CONTACT SECTION */
+.contact-icon {
+    font-size: 1.125rem;
+    margin: .08em .25em 0 3.5em;
+}
+
+.contact-detail, .contact-detail a {
+    display: flex;
+    align-items: center;
+}
+
+
+/* PROFILE SECTION */
+.profile-description {
+    text-align: center;
+}
 
 /* EDUCATION SECTION */
-.education-point {
-    display: flex;
-}
-
-.education-timeline {
-    padding-right: 1em;
-}
-
-.education-rounder {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: black;
-    margin-top: .25em;
-}
-
-.education-line {
-    width: 2px;
-    height: 100%;
-    transform: translate(7px, 0);
-    background: black;
+.education-years {
+    color: var(--dark2-color);
 }
 
 
-/* SKILLS SECTION */
-.skills-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
 
 
 /* MEDIA QUERIES */
 @media(min-width: 720px) {
     .resume {
         flex-direction: row;
+    }
+
+    .resume-left {
+        width: 30%;
+        margin-right: 3em;
+        border-right: 3px solid var(--accent-color);
     }
 }
