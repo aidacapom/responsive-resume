@@ -1,9 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
+/* CSS VARIABLES */
 :root {
+    /* Colors */
+    --light-color: #fcfcfc;
     --accent-color: #168378;
-    --dark-color: #343434;
-    --dark2-color: #747272;
+    --darkest-color: #343434;
+    --dark-color: #747272;
+
+    /* Font families */
+    --ff-primary: 'Poppins', sans-serif;
+
+    /* Font weight */
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+
+    /* Font sizes */
+    --fs-h1: 1.375rem;
+    --fs-h2: 1.125rem;
+    --fs-h3: 1rem;
+    --fs-body: 1rem;
+    --fs-small: .875rem;
 }
 
 *, ::before, ::after {
@@ -13,10 +32,10 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    background: #fcfcfc;
-    color: var(--dark-color);
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-light);
+    background: var(--light-color);
+    color: var(--darkest-color);
 }
 
 ul {
@@ -24,13 +43,17 @@ ul {
     list-style: none;
 }
 
+.bullet-list {
+    margin-left: 1em;
+}
 
 .bullet-list li::before {
     content: "\2022";  /* \2022 is the CSS Code/unicode for a bullet */
     color: var(--accent-color); 
-    font-weight: bold;
+    font-weight: var(--fw-medium);
     display: inline-block; /* Needed to add space between the bullet and the text */
     width: 1em;
+    margin-left: -1em;
 }
 
 img {
@@ -39,7 +62,7 @@ img {
 
 /* GLOBAL TYPOGRAPHY STYLES */
 a {
-    color: var(--dark-color);
+    color: var(--darkest-color);
     text-decoration: none;
 }
 
@@ -47,21 +70,25 @@ h1, h2, h3, ul, p {
     margin: 0;
 }
 
-h1, h2, h3 {
-    color: var(--title-color);
-    font-weight: 500;
+h1, h2 {
+    font-weight: var(--fw-regular);
 }
 
 h1 {
-    font-size: 1.375rem;
+    font-size: var(--fs-h1);
 }
 
 h2 {
-    font-size: 1.125rem;
+    font-size: var(--fs-h2);
 }
 
 h3 {
-    font-size: 1rem;
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-medium);
+}
+
+strong {
+    font-weight: var(--fw-regular);
 }
 
 .bx, 
@@ -96,6 +123,7 @@ section {
     width: fit-content;
     min-width: 180px;
     background: var(--accent-color);
+    color: var(--light-color);
     padding: .1em .5em;
     text-transform: uppercase;
     text-align: center;
@@ -142,7 +170,7 @@ section {
 
 /* CONTACT SECTION */
 .contact-icon {
-    font-size: 1.125rem;
+    font-size: var(--fs-h2);
     margin: .08em .25em 0 3.5em;
 }
 
@@ -157,12 +185,28 @@ section {
     text-align: center;
 }
 
-/* EDUCATION SECTION */
-.education-years {
-    color: var(--dark2-color);
+
+/* EDUCATION SECTION, COURSES SECTION */
+.years, .institution {
+    font-size: var(--fs-small);
+    font-weight: var(--fw-light);
 }
 
+.years {
+    color: var(--dark-color);
+}
 
+.institution {
+    color: var(--accent-color);
+}
+
+.education-point {
+    gap: .2em;
+}
+
+.education-point:not(.education-point:last-of-type) {
+    margin-bottom: 1em;
+}
 
 
 /* MEDIA QUERIES */
