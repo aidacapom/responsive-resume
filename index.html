@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
     <title>Aida Capó Martí - CV</title>
 </head>
 <body>
-    <div class="resume">
+    <div class="resume" id="pdf-area">
         <div class="resume-left">
             <section class="intro-section">
-                <img class="profile-pic" src="img/cv_pic.jpg" alt="">
+                <img class="profile-pic" src="assets/img/cv_pic.jpg" alt="">
                 <h1>Aida Capó Martí</h1>
                 <h3 class="job-title">Web Developer</h3>
+                <div>
+                    <a href="assets/pdf/resume.pdf" class="download-btn-mobile">Download</a>
+                </div>
             </section>
 
             <section class="contact-section flex-container">
@@ -45,6 +48,8 @@
                         </a>
                     </span>
                 </div>
+
+                <i class="bx bx-download generate-pdf" title="Generate PDF" id="generate-pdf-btn"></i>
             </section>
 
             <section class="skills-section">
@@ -171,6 +176,7 @@
         </div>
     </div>
 
-    <script src="index.js"></script>
+    <script src="assets/js/html2pdf.bundle.min.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>

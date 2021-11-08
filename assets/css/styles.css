@@ -25,6 +25,7 @@
     --fs-small: .875rem;
 }
 
+/* BASE */
 *, ::before, ::after {
     box-sizing: border-box;
 }
@@ -33,12 +34,14 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--ff-primary);
+    font-size: var(--fs-body);
     font-weight: var(--fw-light);
     background: var(--light-color);
     color: var(--darkest-color);
 }
 
 ul {
+    margin: 0;
     padding: 0;
     list-style: none;
 }
@@ -66,7 +69,7 @@ a {
     text-decoration: none;
 }
 
-h1, h2, h3, ul, p {
+h1, h2, h3, p {
     margin: 0;
 }
 
@@ -99,12 +102,15 @@ strong {
 
 /* GLOBAL SECTION STYLES */
 section {
-    padding: 0 1.5em 1.5em;
+    padding: 1.5em 0 0;
+}
+
+.resume-right section:last-of-type {
+    padding-bottom: 1.5em;
 }
 
 .section-title-container {
     position: relative;
-    color: #fff;
 }
 
 .section-title::after {
@@ -121,8 +127,9 @@ section {
 
 .section-title {
     width: fit-content;
-    min-width: 180px;
+    min-width: 160px;
     background: var(--accent-color);
+    border-radius: .1em;
     color: var(--light-color);
     padding: .1em .5em;
     text-transform: uppercase;
@@ -136,7 +143,15 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 1.5em;
+    max-width: 968px;
+    width: 100%;
+    padding: 0 2.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resume-left {
+    position: relative;
 }
 
 .grid {
@@ -148,6 +163,42 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* PDF STYLES */
+body.pdf {
+    --fs-h1: 1rem;
+    --fs-h2: .875rem;
+    --fs-h3: .8125rem;
+    --fs-body: .8125rem;
+    --fs-small: .75rem;
+}
+
+.pdf .generate-pdf{
+    display: none;
+}
+
+.pdf .resume {
+    max-width: 780px;
+}
+
+.pdf .resume-left, 
+.pdf .resume-right {
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+}
+
+.pdf .resume-left {
+    width: min-content;
+    min-height: 1121px;
+}
+
+.pdf section {
+    margin-bottom: 1.5em;
+}
+
+.pdf .section-title {
+    min-width: 110px;
 }
 
 
@@ -163,20 +214,55 @@ section {
 }
 
 .profile-pic {
-    width: 40%;
+    width: 25%;
     border-radius: 50%;
 }
 
+.download-btn-mobile {
+    display: inline-block;
+    border: 3px solid var(--darkest-color);
+    color: var(--darkest-color);
+    padding: .25em 1em;
+    border-radius: .1em;
+    font-weight: var(--fw-medium);
+    letter-spacing: .5px;;
+    margin-top: 1em;
+    transition: .3s;
+}
+
+.download-btn-mobile:hover {
+    background:  var(--darkest-color);
+    color: var(--light-color);
+}
 
 /* CONTACT SECTION */
+
+.contact-section {
+    padding-bottom: .5em;
+}
+
 .contact-icon {
     font-size: var(--fs-h2);
-    margin: .08em .25em 0 3.5em;
+    margin: .08em .25em 0 3em;
 }
 
 .contact-detail, .contact-detail a {
     display: flex;
     align-items: center;
+}
+
+.generate-pdf {
+    display: none;
+    position: absolute;
+    top: 1em;
+    left: .75em;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--darkest-color);
+}
+
+.generate-pdf:hover {
+    color: var(--dark-color);
 }
 
 
@@ -213,11 +299,55 @@ section {
 @media(min-width: 720px) {
     .resume {
         flex-direction: row;
+        align-items: stretch;
+    }
+
+    .resume-left {
+        width: 45%;
+        padding-right: 2.5em;
+        margin-right: 2.5em;
+        border-right: 3px solid var(--accent-color);
+    }
+
+    .resume-left section:last-of-type {
+        padding-bottom: 1.5em;
+    }
+
+    .profile-pic {
+        width: 40%;
+    }
+}
+
+@media(min-width: 968px) {
+    .resume {
+        flex-direction: row;
+        align-items: stretch;
     }
 
     .resume-left {
         width: 30%;
-        margin-right: 3em;
+        padding-right: 2.5em;
+        margin-right: 2.5em;
         border-right: 3px solid var(--accent-color);
+    }
+
+    .resume-left section:last-of-type {
+        padding-bottom: 1.5em;
+    }
+
+    .profile-pic {
+        width: 50%;
+    }
+
+    .contact-icon {
+        margin-left: 0em;
+    }
+
+    .generate-pdf {
+        display: inline-block;
+    }
+
+    .download-btn-mobile {
+        display: none;
     }
 }
