@@ -69,6 +69,15 @@ a {
     text-decoration: none;
 }
 
+.link {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.link:focus, .link:hover {
+    color: var(--dark-color);
+}
+
 h1, h2, h3, p {
     margin: 0;
 }
@@ -165,42 +174,6 @@ section {
     align-items: center;
 }
 
-/* PDF STYLES */
-body.pdf {
-    --fs-h1: 1rem;
-    --fs-h2: .875rem;
-    --fs-h3: .8125rem;
-    --fs-body: .8125rem;
-    --fs-small: .75rem;
-}
-
-.pdf .generate-pdf{
-    display: none;
-}
-
-.pdf .resume {
-    max-width: 780px;
-}
-
-.pdf .resume-left, 
-.pdf .resume-right {
-    padding-top: 2.5em;
-    padding-bottom: 2.5em;
-}
-
-.pdf .resume-left {
-    width: min-content;
-    min-height: 1121px;
-}
-
-.pdf section {
-    margin-bottom: 1.5em;
-}
-
-.pdf .section-title {
-    min-width: 110px;
-}
-
 
 /* INTRO SECTION */
 .intro-section {
@@ -265,6 +238,17 @@ body.pdf {
     color: var(--dark-color);
 }
 
+/* HOBBIES SECTION */
+.hobbie-item{
+    display: flex;
+    align-items: center;
+}
+
+.hobbie-item .bx {
+    margin-right: .5em;
+    line-height: 1.7em;
+}
+
 
 /* PROFILE SECTION */
 .profile-description {
@@ -272,7 +256,7 @@ body.pdf {
 }
 
 
-/* EDUCATION SECTION, COURSES SECTION */
+/* EDUCATION, COURSES AND EMPLOYEMENT SECTIONS */
 .years, .institution {
     font-size: var(--fs-small);
     font-weight: var(--fw-light);
@@ -286,14 +270,51 @@ body.pdf {
     color: var(--accent-color);
 }
 
-.education-point {
+.education-point, .employment-point {
     gap: .2em;
 }
 
-.education-point:not(.education-point:last-of-type) {
+.education-point:not(.education-point:last-of-type),
+.employment-point:not(.employment-point:last-of-type) {
     margin-bottom: 1em;
 }
 
+/* PDF STYLES */
+body.pdf {
+    --fs-h1: 1rem;
+    --fs-h2: .875rem;
+    --fs-h3: .8125rem;
+    --fs-body: .8125rem;
+    --fs-small: .75rem;
+}
+
+.pdf .generate-pdf{
+    display: none;
+}
+
+.pdf .resume {
+    max-width: 780px;
+}
+
+.pdf .resume-left, 
+.pdf .resume-right {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.pdf .resume-left {
+    width: min-content;
+    min-height: 1121px;
+}
+
+.pdf section {
+    margin-bottom: .75em;
+}
+
+.pdf .section-title {
+    min-width: 110px;
+    margin-bottom: 1.5em;
+}
 
 /* MEDIA QUERIES */
 @media(min-width: 720px) {

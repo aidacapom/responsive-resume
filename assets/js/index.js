@@ -3,7 +3,7 @@ const pdfArea = document.getElementById('pdf-area')
 const pdfOptions = {
     margin: 0, 
     filename: 'aida-capo-resume.pdf',
-    image: { type: 'jpeg', quality: 0.98},
+    image: { type: 'jpeg', quality: 1},
     html2canvas: { scale: 4 }, 
     jsPDF: { format: 'a4', orientation: 'portrait'}
 }
