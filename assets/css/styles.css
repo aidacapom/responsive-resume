@@ -1,374 +1,397 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 
 /* CSS VARIABLES */
 :root {
-    /* Colors */
-    --light-color: #fcfcfc;
-    --accent-color: #168378;
-    --darkest-color: #343434;
-    --dark-color: #747272;
+  /* Colors */
+  --light-color: #fcfcfc;
+  --accent-color: #168378;
+  --darkest-color: #343434;
+  --dark-color: #747272;
 
-    /* Font families */
-    --ff-primary: 'Poppins', sans-serif;
+  /* Font families */
+  --ff-primary: "Poppins", sans-serif;
 
-    /* Font weight */
-    --fw-light: 300;
-    --fw-regular: 400;
-    --fw-medium: 500;
+  /* Font weight */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
 
-    /* Font sizes */
-    --fs-h1: 1.375rem;
-    --fs-h2: 1.125rem;
-    --fs-h3: 1rem;
-    --fs-body: 1rem;
-    --fs-small: .875rem;
+  /* Font sizes */
+  --fs-h1: 1.375rem;
+  --fs-h2: 1.125rem;
+  --fs-h3: 1rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
 }
 
 /* BASE */
-*, ::before, ::after {
-    box-sizing: border-box;
+*,
+::before,
+::after {
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--ff-primary);
-    font-size: var(--fs-body);
-    font-weight: var(--fw-light);
-    background: var(--light-color);
-    color: var(--darkest-color);
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-light);
+  background: var(--light-color);
+  color: var(--darkest-color);
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .bullet-list {
-    margin-left: 1em;
+  margin-left: 1em;
 }
 
 .bullet-list li::before {
-    content: "\2022";  /* \2022 is the CSS Code/unicode for a bullet */
-    color: var(--accent-color); 
-    font-weight: var(--fw-medium);
-    display: inline-block; /* Needed to add space between the bullet and the text */
-    width: 1em;
-    margin-left: -1em;
+  content: "\2022"; /* \2022 is the CSS Code/unicode for a bullet */
+  color: var(--accent-color);
+  font-weight: var(--fw-medium);
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em;
+  margin-left: -1em;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 /* GLOBAL TYPOGRAPHY STYLES */
 a {
-    color: var(--darkest-color);
-    text-decoration: none;
+  color: var(--darkest-color);
+  text-decoration: none;
 }
 
 .link {
-    color: var(--accent-color);
-    text-decoration: underline;
+  color: var(--accent-color);
+  text-decoration: underline;
 }
 
-.link:focus, .link:hover {
-    color: var(--dark-color);
+.link:focus,
+.link:hover {
+  color: var(--dark-color);
 }
 
-h1, h2, h3, p {
-    margin: 0;
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
 
-h1, h2 {
-    font-weight: var(--fw-regular);
+h1,
+h2 {
+  font-weight: var(--fw-regular);
 }
 
 h1 {
-    font-size: var(--fs-h1);
+  font-size: var(--fs-h1);
 }
 
 h2 {
-    font-size: var(--fs-h2);
+  font-size: var(--fs-h2);
 }
 
 h3 {
-    font-size: var(--fs-h3);
-    font-weight: var(--fw-medium);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-medium);
 }
 
 strong {
-    font-weight: var(--fw-regular);
+  font-weight: var(--fw-regular);
 }
 
-.bx, 
+.bx,
 .accent {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
-
 
 /* GLOBAL SECTION STYLES */
 section {
-    padding: 1.5em 0 0;
+  padding: 1.5em 0 0;
 }
 
 .resume-right section:last-of-type {
-    padding-bottom: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 .section-title-container {
-    position: relative;
+  position: relative;
 }
 
 .section-title::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 3px;
-    background: var(--accent-color);
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent-color);
+  z-index: -1;
 }
 
 .section-title {
-    width: fit-content;
-    min-width: 160px;
-    background: var(--accent-color);
-    border-radius: .1em;
-    color: var(--light-color);
-    padding: .1em .5em;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 1px;
-    margin: 0 auto 1em;
+  width: fit-content;
+  min-width: 160px;
+  background: var(--accent-color);
+  border-radius: 0.1em;
+  color: var(--light-color);
+  padding: 0.1em 0.5em;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 0 auto 1em;
 }
 
 /* LAYOUT STYLES */
 .resume {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 968px;
-    width: 100%;
-    padding: 0 2.5em;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 968px;
+  width: 100%;
+  padding: 0 2.5em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .resume-left {
-    position: relative;
+  position: relative;
 }
 
 .grid {
-    display: grid;
-    gap: .5em;
+  display: grid;
+  gap: 0.5em;
 }
 
 .flex-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
 
 /* INTRO SECTION */
 .intro-section {
-    text-align: center;
+  text-align: center;
 }
 
 .job-title {
-    color: var(--accent-color);
-    text-transform: uppercase;
-    letter-spacing: .8px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
 }
 
 .profile-pic {
-    width: 25%;
-    border-radius: 50%;
+  width: 25%;
+  border-radius: 50%;
 }
 
 .download-btn-mobile {
-    display: inline-block;
-    border: 3px solid var(--darkest-color);
-    color: var(--darkest-color);
-    padding: .25em 1em;
-    border-radius: .1em;
-    font-weight: var(--fw-medium);
-    letter-spacing: .5px;;
-    margin-top: 1em;
-    transition: .3s;
+  display: inline-block;
+  border: 3px solid var(--darkest-color);
+  color: var(--darkest-color);
+  padding: 0.25em 1em;
+  border-radius: 0.1em;
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.5px;
+  margin-top: 1em;
+  transition: 0.3s;
 }
 
 .download-btn-mobile:hover {
-    background:  var(--darkest-color);
-    color: var(--light-color);
+  background: var(--darkest-color);
+  color: var(--light-color);
 }
 
 /* CONTACT SECTION */
 
 .contact-section {
-    padding-bottom: .5em;
+  padding-bottom: 0.5em;
 }
 
 .contact-icon {
-    font-size: var(--fs-h2);
-    margin: .08em .25em 0 3em;
+  font-size: var(--fs-h2);
+  margin: 0.08em 0.25em 0 3em;
 }
 
-.contact-detail, .contact-detail a {
-    display: flex;
-    align-items: center;
+.contact-detail,
+.contact-detail a {
+  display: flex;
+  align-items: center;
 }
 
 .generate-pdf {
-    display: none;
-    position: absolute;
-    top: 1em;
-    left: .75em;
-    font-size: 1.4rem;
-    cursor: pointer;
-    color: var(--darkest-color);
+  display: none;
+  position: absolute;
+  top: 1em;
+  left: 0.75em;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--darkest-color);
 }
 
 .generate-pdf:hover {
-    color: var(--dark-color);
+  color: var(--dark-color);
 }
 
 /* HOBBIES SECTION */
-.hobbie-item{
-    display: flex;
-    align-items: center;
+.hobbie-item {
+  display: flex;
+  align-items: center;
 }
 
 .hobbie-item .bx {
-    margin-right: .5em;
-    line-height: 1.7em;
+  margin-right: 0.5em;
+  line-height: 1.7em;
 }
-
 
 /* PROFILE SECTION */
 .profile-description {
-    text-align: center;
+  text-align: center;
 }
-
 
 /* EDUCATION, COURSES AND EMPLOYEMENT SECTIONS */
-.years, .institution {
-    font-size: var(--fs-small);
-    font-weight: var(--fw-light);
+.years,
+.institution,
+.duration,
+.skills {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-light);
 }
 
-.years {
-    color: var(--dark-color);
+.years,
+.skills {
+  color: var(--dark-color);
 }
 
-.institution {
-    color: var(--accent-color);
+.skills {
+  display: flex;
 }
 
-.education-point, .employment-point {
-    gap: .2em;
+.inline-bullet-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inline-bullet-list li::before {
+  margin-left: 1em;
+}
+
+.institution,
+.duration {
+  color: var(--accent-color);
+}
+
+.education-point,
+.employment-point {
+  gap: 0.2em;
 }
 
 .education-point:not(.education-point:last-of-type),
 .employment-point:not(.employment-point:last-of-type) {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 /* PDF STYLES */
 body.pdf {
-    --fs-h1: 1rem;
-    --fs-h2: .875rem;
-    --fs-h3: .8125rem;
-    --fs-body: .8125rem;
-    --fs-small: .75rem;
+  --fs-h1: 1rem;
+  --fs-h2: 0.875rem;
+  --fs-h3: 0.8125rem;
+  --fs-body: 0.8125rem;
+  --fs-small: 0.75rem;
 }
 
-.pdf .generate-pdf{
-    display: none;
+.pdf .generate-pdf {
+  display: none;
 }
 
 .pdf .resume {
-    max-width: 780px;
+  max-width: 780px;
 }
 
-.pdf .resume-left, 
+.pdf .resume-left,
 .pdf .resume-right {
-    padding-top: 1em;
-    padding-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .pdf .resume-left {
-    width: min-content;
-    min-height: 1121px;
+  width: min-content;
+  min-height: 1121px;
 }
 
 .pdf section {
-    margin-bottom: .75em;
+  margin-bottom: 0.75em;
 }
 
 .pdf .section-title {
-    min-width: 110px;
-    margin-bottom: 1.5em;
+  min-width: 110px;
+  margin-bottom: 1.5em;
 }
 
 /* MEDIA QUERIES */
-@media(min-width: 720px) {
-    .resume {
-        flex-direction: row;
-        align-items: stretch;
-    }
+@media (min-width: 720px) {
+  .resume {
+    flex-direction: row;
+    align-items: stretch;
+  }
 
-    .resume-left {
-        width: 45%;
-        padding-right: 2.5em;
-        margin-right: 2.5em;
-        border-right: 3px solid var(--accent-color);
-    }
+  .resume-left {
+    width: 45%;
+    padding-right: 2.5em;
+    margin-right: 2.5em;
+    border-right: 3px solid var(--accent-color);
+  }
 
-    .resume-left section:last-of-type {
-        padding-bottom: 1.5em;
-    }
+  .resume-left section:last-of-type {
+    padding-bottom: 1.5em;
+  }
 
-    .profile-pic {
-        width: 40%;
-    }
+  .profile-pic {
+    width: 40%;
+  }
 }
 
-@media(min-width: 968px) {
-    .resume {
-        flex-direction: row;
-        align-items: stretch;
-    }
+@media (min-width: 968px) {
+  .resume {
+    flex-direction: row;
+    align-items: stretch;
+  }
 
-    .resume-left {
-        width: 30%;
-        padding-right: 2.5em;
-        margin-right: 2.5em;
-        border-right: 3px solid var(--accent-color);
-    }
+  .resume-left {
+    width: 30%;
+    padding-right: 2.5em;
+    margin-right: 2.5em;
+    border-right: 3px solid var(--accent-color);
+  }
 
-    .resume-left section:last-of-type {
-        padding-bottom: 1.5em;
-    }
+  .resume-left section:last-of-type {
+    padding-bottom: 1.5em;
+  }
 
-    .profile-pic {
-        width: 50%;
-    }
+  .profile-pic {
+    width: 50%;
+  }
 
-    .contact-icon {
-        margin-left: 0em;
-    }
+  .contact-icon {
+    margin-left: 0em;
+  }
 
-    .generate-pdf {
-        display: inline-block;
-    }
+  .generate-pdf {
+    display: inline-block;
+  }
 
-    .download-btn-mobile {
-        display: none;
-    }
+  .download-btn-mobile {
+    display: none;
+  }
 }
