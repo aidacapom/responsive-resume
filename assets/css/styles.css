@@ -264,13 +264,15 @@ section {
 .years,
 .institution,
 .duration,
-.skills {
+.skills,
+.achievement {
   font-size: var(--fs-small);
   font-weight: var(--fw-light);
 }
 
 .years,
-.skills {
+.skills,
+.achievement {
   color: var(--dark-color);
 }
 
