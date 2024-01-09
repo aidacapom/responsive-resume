@@ -255,14 +255,19 @@ section {
     text-align: center;
 }
 
-
 /* EDUCATION, COURSES AND EMPLOYEMENT SECTIONS */
-.years, .institution {
+.years, .institution, .stack {
     font-size: var(--fs-small);
     font-weight: var(--fw-light);
 }
 
-.years {
+/* STACK */
+.stack {
+    font-style: italic;
+    font-weight: var(--fw-medium);
+}
+
+.years, .stack {
     color: var(--dark-color);
 }
 
